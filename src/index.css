@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #ffffff;    
+  background-color: #ffffff;
   /* A lighter, more white body bg to let gradients show through properly */
   overflow-x: hidden;
 }
@@ -41,7 +41,7 @@ body {
   right: 0;
   width: 80vw;
   height: 80vh;
-  background: radial-gradient(circle at top right, rgba(162, 237, 235, 0.4) 0%, rgba(255,255,255,0) 60%);
+  background: radial-gradient(circle at top right, rgba(162, 237, 235, 0.4) 0%, rgba(255, 255, 255, 0) 60%);
 }
 
 /* Bottom Left Red Gradient */
@@ -50,7 +50,7 @@ body {
   left: 0;
   width: 80vw;
   height: 80vh;
-  background: radial-gradient(circle at bottom left, rgba(240, 160, 160, 0.4) 0%, rgba(255,255,255,0) 60%);
+  background: radial-gradient(circle at bottom left, rgba(240, 160, 160, 0.4) 0%, rgba(255, 255, 255, 0) 60%);
 }
 
 /* Navbar */
@@ -62,16 +62,42 @@ body {
   background: transparent;
 }
 
+.nav-menu-pill {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px 12px 8px 50px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  width: 65%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .logo-container .nav-logo {
   height: 40px;
   object-fit: contain;
+}
+
+.nav-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+  border-left: 2px solid var(--text-dark);
+  padding-left: 15px;
 }
 
 /* Nav links */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 30px;
   padding: 0;
   margin: 0;
   align-items: center;
@@ -153,7 +179,6 @@ body {
 .hero-icon {
   height: 80px;
   margin-bottom: 20px;
-  /* If the logo is not fully cut correctly for this icon use case, we might need a workaround */
   object-fit: contain;
   object-position: left;
 }
@@ -194,18 +219,9 @@ body {
   display: flex;
 }
 
-.avatar {
-  width: 50px;
+.group-avatar {
   height: 50px;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  object-fit: cover;
-  margin-left: -15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.avatar:first-child {
-  margin-left: 0;
+  object-fit: contain;
 }
 
 .description-text {
@@ -227,14 +243,6 @@ body {
   max-width: 110%;
   height: auto;
   object-fit: contain;
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Float animation for illustration */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
 }
 
 /* Responsiveness */
@@ -242,6 +250,7 @@ body {
   .meet-aeris {
     font-size: 4rem;
   }
+
   .hello-world {
     font-size: 1.5rem;
   }
@@ -253,10 +262,12 @@ body {
     text-align: center;
     padding: 0 20px;
   }
+
   .navbar {
     flex-direction: column;
     gap: 20px;
   }
+
   .hero-content {
     max-width: 100%;
     margin-bottom: 40px;
@@ -265,13 +276,16 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
   .system-subtitle {
     max-width: 100%;
   }
+
   .avatar-description-group {
     flex-direction: column;
     text-align: center;
   }
+
   .main-illustration {
     max-width: 100%;
   }
