@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import Auth from './pages/Auth.jsx'
 import Features from './pages/Features.jsx'
+import Dashboard from './pages/Dashboard.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/features" element={<Features />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
