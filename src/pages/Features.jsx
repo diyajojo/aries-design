@@ -29,34 +29,36 @@ export default function Features() {
       <Navbar />
 
       {/* Hero */}
-      <div className="flex flex-col items-center pt-10 pb-6 relative z-10">
-        <img src="/assets/logo.svg" alt="Aeris" className="h-16 mb-3 object-contain" />
-        <h1 className="text-[3.5rem] font-black text-primary-red tracking-[-1px] leading-none">AERIS</h1>
-        <p className="text-[1.05rem] font-bold text-text-dark mt-3 text-center">
+      <div className="flex flex-col items-center pt-16 pb-12 relative z-10">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-4">
+          <img src="/assets/logo.svg" alt="Aeris Logo" className="h-[70px] md:h-[100px] object-contain" />
+          <h1 className="text-[4rem] md:text-[6rem] font-black text-primary-red tracking-[-2px] leading-none">AERIS</h1>
+        </div>
+        <p className="text-[1.1rem] md:text-[1.3rem] font-bold text-text-dark mt-2 text-center">
           Report, track, and receive emergency help<br />effortlessly with AERIS.
         </p>
       </div>
 
       {/* Feature Cards */}
-      <main className="flex-1 px-[40px] md:px-[80px] pb-[60px] relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <main className="flex-1 px-[20px] md:px-[60px] pb-[80px] relative z-10 flex flex-col justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 max-w-[1400px] mx-auto w-full">
           {CARDS.map(({ img, title, desc }) => (
             <div
               key={title}
-              className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col"
+              className="bg-white rounded-[2rem] shadow-[0_8px_30px_rgba(0,0,0,0.12)] overflow-hidden flex flex-col h-full"
             >
-              <div className="h-[260px] overflow-hidden">
+              <div className="h-[300px] md:h-[380px] overflow-hidden">
                 <img
                   src={img}
                   alt={title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-6 flex flex-col gap-3">
-                <h3 className="text-[1.05rem] font-extrabold text-primary-red text-center leading-snug">
+              <div className="p-8 md:p-10 flex flex-col gap-4 flex-grow justify-center">
+                <h3 className="text-[1.2rem] md:text-[1.5rem] font-extrabold text-primary-red text-center leading-tight px-4">
                   {title}
                 </h3>
-                <p className="text-[0.9rem] text-gray-500 leading-relaxed">
+                <p className="text-[0.95rem] md:text-[1.05rem] text-[#555] text-center leading-relaxed">
                   {desc}
                 </p>
               </div>
